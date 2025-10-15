@@ -45,12 +45,3 @@ The main goal is to provide an **interactive and responsive** site that highligh
 - Enhance design using frameworks like **Bootstrap** or **Tailwind CSS**
 
 ---
-
-## 📁 Folder Structure
-portfolio/
-│
-├── **index.html** | Main page |
-├── **style.css** | Custom CSS styles |
-├── **script.js** | Optional JavaScript file |
-├── **images** | Profile or project images |
-└── **README.md**| Project documentation |
