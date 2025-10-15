@@ -1,6 +1,6 @@
-# 🌐 Personal Portfolio Website
+# 🌐 Portfolio Website
 
-Welcome to my personal portfolio website — a digital space to showcase my **projects, skills, and achievements** as a developer and tech enthusiast.
+Welcome to my first portfolio website 
 
 🔗 **Live Demo:** [isaitamilselvan.github.io/portfolio](https://isaitamilselvan.github.io/portfolio/)
 
@@ -8,10 +8,8 @@ Welcome to my personal portfolio website — a digital space to showcase my **pr
 
 ## 🧑‍💻 About the Project
 
-This portfolio website is designed to represent my work, creativity, and technical journey.  
+This portfolio website is designed to represent my work, creativity,
 It includes sections for my **profile**, **team members**, and potentially future **projects** or collaborations.
-
-The main goal is to provide an **interactive and responsive** site that highlights my development skills and allows others to connect with me easily.
 
 ---
 
