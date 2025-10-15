@@ -45,3 +45,5 @@ The main goal is to provide an **interactive and responsive** site that highligh
 - Enhance design using frameworks like **Bootstrap** or **Tailwind CSS**
 
 ---
+ **Team Members / Collaborators** | 🤝 This project was created in collaboration with amazing teammates:<br> - [@JoshwaSamuelM](https://github.com/JoshwaSamuelM)<br> - [@MuthuPratheeshS](https://github.com/MuthuPratheeshS)<br> - [@KLingaraja](https://github.com/KLingaraja)<br> - [@MohamedRamzil](https://github.com/MohamedRamzil)<br> - [@IsaiTamilSelvan](https://github.com/isaitamilselvan) |
+
