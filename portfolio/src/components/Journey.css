@@ -1,0 +1,83 @@
+/* Journey.css */
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+/* The dot on the line */
+.timeline__dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.timeline__period {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.timeline__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__org {
+  font-size: 13px;
+  color: var(--blue);
+  margin-bottom: 0.65rem;
+}
+
+.timeline__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline__points li {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.timeline__points li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--text-dim);
+}

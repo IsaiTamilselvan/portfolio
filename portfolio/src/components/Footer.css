@@ -1,0 +1,18 @@
+/* Footer.css */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer__text {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.footer__name {
+  color: var(--text-muted);
+}

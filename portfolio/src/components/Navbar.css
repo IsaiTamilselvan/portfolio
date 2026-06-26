@@ -1,0 +1,115 @@
+/* Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(6, 9, 16, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+/* when scrolled, show a border under the nav */
+.navbar--scrolled {
+  border-bottom-color: var(--border);
+  background: rgba(6, 9, 16, 0.92);
+}
+
+.navbar__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-code);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.navbar__logo:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar__link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.navbar__link:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Hamburger button — hidden on desktop */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-muted);
+  border-radius: 2px;
+}
+
+/* Mobile dropdown */
+.navbar__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.navbar__mobile-link {
+  padding: 0.75rem 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__mobile-link:last-child {
+  border-bottom: none;
+}
+
+/* Responsive: show hamburger on mobile */
+@media (max-width: 640px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}

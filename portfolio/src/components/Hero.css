@@ -1,0 +1,190 @@
+/* Hero.css */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 2rem 4rem;
+  overflow: hidden;
+}
+
+/* Glowing blobs in the background */
+.hero__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.hero__glow--blue {
+  width: 500px;
+  height: 500px;
+  background: var(--blue);
+  top: -100px;
+  right: -100px;
+}
+
+.hero__glow--green {
+  width: 350px;
+  height: 350px;
+  background: var(--green);
+  bottom: 0;
+  left: -80px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Badge */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  font-family: var(--font-code);
+  color: var(--green);
+  background: var(--green-soft);
+  border: 1px solid rgba(63, 185, 80, 0.25);
+  padding: 0.35rem 0.85rem;
+  border-radius: 99px;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+.hero__badge-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Heading */
+.hero__heading {
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero__name {
+  /* gradient text */
+  background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Typing role line */
+.hero__role {
+  font-family: var(--font-code);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  min-height: 1.8em;
+}
+
+.hero__role-prefix {
+  color: var(--text-dim);
+}
+
+.hero__role-text {
+  color: var(--orange);
+}
+
+.hero__cursor {
+  color: var(--orange);
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Bio */
+.hero__bio {
+  max-width: 520px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+.hero__bio strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Action buttons */
+.hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+/* Stats row */
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__stat-num {
+  font-family: var(--font-code);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+}
+
+.hero__stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+.hero__stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 90px 1.25rem 3rem;
+  }
+
+  .hero__stat-divider {
+    display: none;
+  }
+
+  .hero__stats {
+    gap: 1.25rem;
+  }
+}
