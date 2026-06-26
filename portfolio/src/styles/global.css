@@ -1,0 +1,187 @@
+/* =============================================
+   global.css  —  reset + base + CSS variables
+   This file is imported once in main.jsx
+   ============================================= */
+
+/* Google Fonts are loaded in index.html */
+
+/* ---------- CSS variables (like a theme config) ---------- */
+:root {
+  --bg:          #060910;
+  --surface:     #0d1117;
+  --surface2:    #161b22;
+  --border:      #1e2530;
+  --border2:     #2d3748;
+
+  --text:        #f0f6fc;
+  --text-muted:  #7d8fa9;
+  --text-dim:    #4a5568;
+
+  --blue:        #58a6ff;
+  --blue-soft:   #1c3a5e;
+  --green:       #3fb950;
+  --green-soft:  #0f3320;
+  --orange:      #e8834a;
+  --orange-soft: #3d1f0a;
+  --purple:      #b794f4;
+  --purple-soft: #2d1f4e;
+  --pink:        #f687b3;
+
+  --font-main: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  /* subtle grid pattern in background */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Shared layout ---------- */
+.section-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-eyebrow {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- Shared button styles ---------- */
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--blue);
+  color: #060910;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-solid:hover {
+  opacity: 0.82;
+  text-decoration: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border2);
+  transition: border-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* ---------- Skill tag pill ---------- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 0.28rem 0.65rem;
+  border-radius: 4px;
+}
+
+.tag-blue   { background: rgba(88, 166, 255, 0.1);  color: #79b8ff; border: 1px solid rgba(88,166,255,0.2); }
+.tag-green  { background: rgba(63, 185, 80, 0.1);   color: #56d364; border: 1px solid rgba(63,185,80,0.2); }
+.tag-orange { background: rgba(232, 131, 74, 0.1);  color: #ffa270; border: 1px solid rgba(232,131,74,0.2); }
+.tag-purple { background: rgba(183, 148, 244, 0.1); color: #d2a8ff; border: 1px solid rgba(183,148,244,0.2); }
+.tag-grey   { background: rgba(125, 143, 169, 0.1); color: #a0aec0; border: 1px solid rgba(125,143,169,0.15); }
+
+/* ---------- Fade-in animation (used by all sections) ---------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .section-wrapper {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
